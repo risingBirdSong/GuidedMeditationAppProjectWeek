@@ -2,7 +2,22 @@
     ViewData["Title"] = "Home Page";
 }
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.js"></script>
+<script>
+   document.addEventListener("DOMContentLoaded", function(){
+       var sound = new Howl({
+        src: ["~/Sounds/firstGuidedMeditationRoughDraft.wav"]
+    });
+
+    sound.play();
+});
+</script>
+
+
+
+<h1>test</h1>
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
