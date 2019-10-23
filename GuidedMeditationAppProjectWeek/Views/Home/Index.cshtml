@@ -4,13 +4,96 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.js"></script>
 <script>
-   document.addEventListener("DOMContentLoaded", function(){
-       var sound = new Howl({
-        src: ["~/Sounds/firstGuidedMeditationRoughDraft.wav"]
+        var sound = new Howl({
+        src: ["Sounds/firstGuidedMeditationRoughDraft.wav"]
     });
 
-    sound.play();
-});
+
+    function timeout(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+    async function SoundsAndDelays() {
+
+        sound.play();
+
+        await timeout(3000);
+
+        console.log("is delay working?");
+
+        sound.pause();
+
+        await timeout(3000);
+        console.log("is delay working?");
+
+
+        sound.play();
+
+        await timeout(3000);
+        console.log("is delay working?");
+
+        sound.pause();
+
+
+          await timeout(3000);
+        console.log("is delay working?");
+
+                sound.play();
+
+
+          await timeout(3000);
+        console.log("is delay working?");
+
+                sound.pause();
+
+
+          await timeout(3000);
+        console.log("is delay working?");
+
+                 sound.play();
+
+
+          await timeout(3000);
+        console.log("is delay working?");
+
+                sound.pause();
+               
+
+          await timeout(3000);
+        console.log("is delay working?");
+
+                sound.play();
+
+
+          await timeout(3000);
+        console.log("is delay working?");
+
+
+          await timeout(3000);
+        console.log("is delay working?");
+
+
+          await timeout(3000);
+        console.log("is delay working?");
+
+
+          await timeout(3000);
+        console.log("is delay working?");
+
+
+          await timeout(3000);
+        console.log("is delay working?");
+
+
+          await timeout(3000);
+        console.log("is delay working?");
+
+
+    }
+    
+    SoundsAndDelays();
+    
+
 </script>
 
 
