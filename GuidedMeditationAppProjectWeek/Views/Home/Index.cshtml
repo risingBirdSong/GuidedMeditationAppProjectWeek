@@ -6,136 +6,121 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        div {
-	background-color: rgba(100, 100, 150, 0.07);
-	animation: haiku 25s linear infinite alternate;
-	}
-
-	 {
-		haiku to {
-			transform: rotate(180deg);
-		}
-	}
+              .Welcome {
+        background-image:url("/image/blue and pink.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        }
+            body {
+              background-image:url("/image/Lily_Pond.webp");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 100vw;
+        padding: 0px;
+            }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.js"></script>
 <script>
-   document.addEventListener("DOMContentLoaded", function(){
-       var sound = new Howl({
+        var sound = new Howl({
         src: ["Sounds/firstGuidedMeditationRoughDraft.wav"]
     });
 
-    sound.play();
-});
+
+    function timeout(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+    async function SoundsAndDelays() {
+
+        sound.play();
+
+        await timeout(3000);
+
+        console.log("is delay working?");
+
+        sound.pause();
+
+        await timeout(3000);
+        console.log("is delay working?");
+
+
+        sound.play();
+
+        await timeout(3000);
+        console.log("is delay working?");
+
+        sound.pause();
+
+
+          await timeout(3000);
+        console.log("is delay working?");
+
+                sound.play();
+
+
+          await timeout(3000);
+        console.log("is delay working?");
+
+                sound.pause();
+
+
+          await timeout(3000);
+        console.log("is delay working?");
+
+                 sound.play();
+
+
+          await timeout(3000);
+        console.log("is delay working?");
+
+                sound.pause();
+               
+
+          await timeout(3000);
+        console.log("is delay working?");
+
+                sound.play();
+
+
+          await timeout(3000);
+        console.log("is delay working?");
+
+
+          await timeout(3000);
+        console.log("is delay working?");
+
+
+          await timeout(3000);
+        console.log("is delay working?");
+
+
+          await timeout(3000);
+        console.log("is delay working?");
+
+
+          await timeout(3000);
+        console.log("is delay working?");
+
+
+          await timeout(3000);
+        console.log("is delay working?");
+
+
+    }
+    
+    SoundsAndDelays();
+    
+
 </script>
 </head>
-<body>
-<div class="text-center mt-5">
-   <div class="container mt-5"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <div>
-  &nbsp;
-  <div>
-    &nbsp;
-    <div>
-      &nbsp;
-      <div>
-        &nbsp;
-        <div>
-          &nbsp;
-          <div>
-            &nbsp;
-            <div>
-              &nbsp;
-              <div>
-                &nbsp;
-                <div>
-                  &nbsp;
-                  <div>
-                    &nbsp;
-                    <div>
-                      &nbsp;
-                      <div>
-                        &nbsp;
-                        <div>
-                          &nbsp;
-                          <div>
-                            &nbsp;
-                            <div>
-                              &nbsp;
-                              <div>
-                                &nbsp;
-                                <div>
-                                  &nbsp;
-                                  <div>
-                                    &nbsp;
-                                    <div>
-                                      &nbsp;
-                                      <div>
-                                        &nbsp;
-                                        <div>
-                                          &nbsp;
-                                          <div>
-                                            &nbsp;
-                                            <div>
-                                              &nbsp;
-                                              <div>
-                                                &nbsp;
-                                                <div>
-                                                  &nbsp;
-                                                  <div>
-                                                    &nbsp;
-                                                    <div>
-                                                      &nbsp;
-                                                      <div>
-                                                        &nbsp;
-                                                        <div>
-                                                          &nbsp;
-                                                          <div>
-                                                            &nbsp;
-                                                            <div>
-                                                              &nbsp;
-                                                              <div>
-                                                                &nbsp;
-                                                                <div>
-                                                                  &nbsp;
-                                                                  <div>
-                                                                    &nbsp;
-                                                                    <div>
-                                                                      &nbsp;
-                                                                    </div>
-                                                                  </div>
-                                                                </div>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                        </div>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<body><br><br><br><br>
+<div class="Lily_Pond bg">
+  <div class="text-center">
+    <img src="~/image/Lotus.gif" alt="Lotus">
   </div>
 </div>
-</div>
+      
+
 </body>
 </html>
