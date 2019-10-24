@@ -1,22 +1,35 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
-<h2>for development purposes only</h2>
-<h1><time>00:00:00</time></h1>
-<button id="start">start</button>
-<button id="stop">stop</button>
-<button id="clear">clear</button>
-
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+              .Welcome {
+        background-image:url("/image/blue and pink.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        }
+            body {
+              background-image:url("/image/Lily_Pond.webp");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 100vw;
+        padding: 0px;
+            }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.js"></script>
 <script>
 
-    var h1 = document.getElementsByTagName('h1')[0],
+    <!-- var h1 = document.getElementsByTagName('h1')[0],
         start = document.getElementById('start'),
         stop = document.getElementById('stop'),
         clear = document.getElementById('clear'),
         seconds = 0, minutes = 0, hours = 0,
-        t;
+        t; -->
 
     //start of borrowed stopwatch
 
@@ -496,12 +509,14 @@
 
 
 </script>
-
-
-
-<h1>test</h1>
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</head>
+<body><br><br><br><br>
+<div class="Lily_Pond bg">
+  <div class="text-center">
+    <img src="~/image/giphy.gif" alt="Lotus">
+  </div>
 </div>
 
+
+</body>
+</html>
