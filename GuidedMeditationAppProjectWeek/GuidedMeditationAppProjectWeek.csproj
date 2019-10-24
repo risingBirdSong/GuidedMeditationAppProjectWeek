@@ -13,12 +13,12 @@
 
 
   <ItemGroup>
-    <Folder Include="Sounds\" />
+    <Folder Include="wwwroot\BackgroundSounds\" />
   </ItemGroup>
 
 
   <ItemGroup>
-    <None Include="wwwroot\Sounds\firstGuidedMeditationRoughDraft.wav" />
+    <None Include="wwwroot\IntroSounds\firstGuidedMeditationRoughDraft.wav" />
   </ItemGroup>
 
 </Project>
