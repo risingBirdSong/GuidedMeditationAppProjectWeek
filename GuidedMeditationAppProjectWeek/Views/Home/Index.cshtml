@@ -2,97 +2,498 @@
     ViewData["Title"] = "Home Page";
 }
 
+<h2>for development purposes only</h2>
+<h1><time>00:00:00</time></h1>
+<button id="start">start</button>
+<button id="stop">stop</button>
+<button id="clear">clear</button>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.js"></script>
 <script>
-        var sound = new Howl({
-        src: ["Sounds/firstGuidedMeditationRoughDraft.wav"]
+
+    var h1 = document.getElementsByTagName('h1')[0],
+        start = document.getElementById('start'),
+        stop = document.getElementById('stop'),
+        clear = document.getElementById('clear'),
+        seconds = 0, minutes = 0, hours = 0,
+        t;
+
+    //start of borrowed stopwatch
+
+    function add() {
+        seconds++;
+        if (seconds >= 60) {
+            seconds = 0;
+            minutes++;
+            if (minutes >= 60) {
+                minutes = 0;
+                hours++;
+            }
+        }
+
+        h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+
+        timer();
+    }
+    function timer() {
+        t = setTimeout(add, 1000);
+    }
+    timer();
+
+
+    /* Start button */
+    start.onclick = timer;
+
+    /* Stop button */
+    stop.onclick = function () {
+        clearTimeout(t);
+    }
+
+    /* Clear button */
+    clear.onclick = function () {
+        h1.textContent = "00:00:00";
+        seconds = 0; minutes = 0; hours = 0;
+    }
+
+    //initializing our variables and promises
+
+    let backgroundWaterFlowing = new Howl({
+        src: ["BackgroundSounds/Sound-of-water-flowing.mp3"],
+        loop: true,
+    });
+
+    //end of borrowed stopwatch
+
+    var sound1 = new Howl({
+        src: ["IntroSounds/guidedMeditation_1.wav"],
+        volume: 1.0,
+        onend: function () {
+            console.log('Finished!');
+            return
+        }
+    });
+
+    var GuidedMeditationeyesopenoption = new Howl({
+        src: ["IntroSounds/GuidedMeditationeyesopenoption.wav"],
+        volume: 1.0,
+        onend: function () {
+            console.log('Finished!');
+            return
+        }
+    });
+
+    const Promise1 = function () {
+        return new Promise(res => {
+            sound1.on('end', function () {
+                console.log("sound 1 is done!");
+                res();
+            });
+            sound1.play();
+        });
+    }
+
+    const PromiseGuidedMeditationeyesopenoption = function () {
+        return new Promise(res => {
+            GuidedMeditationeyesopenoption.on('end', function () {
+                console.log("sound GuidedMeditationeyesopenoption is done!");
+                res();
+            });
+            GuidedMeditationeyesopenoption.play();
+        });
+    }
+
+
+    let sound2 = new Howl({
+        src: ["IntroSounds/guidedMeditation2.wav"],
+        volume: 1.0,
+        onend: function () {
+            console.log('Finished!');
+            return
+        }
     });
 
 
-    function timeout(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
+    const Promise2 = function () {
+        return new Promise(res => {
+            sound2.on('end', function () {
+                console.log("sound 2 is done!");
+                res();
+            });
+            sound2.play();
+        });
+    }
 
+
+    let sound3 = new Howl({
+        src: ["IntroSounds/guidedMeditation3.wav"],
+        volume: 1.0,
+        onend: function () {
+            console.log('Finished!');
+            return
+        }
+    });
+
+
+    const Promise3 = function () {
+        return new Promise(res => {
+            sound3.on('end', function () {
+                console.log("sound 3 is done!");
+                res();
+            });
+            sound3.play();
+        });
+    }
+
+
+
+    let sound4 = new Howl({
+        src: ["IntroSounds/guidedMeditation4.wav"],
+        volume: 1.0,
+        onend: function () {
+            console.log('Finished!');
+            return
+        }
+    });
+
+
+    const Promise4 = function () {
+        return new Promise(res => {
+            sound4.on('end', function () {
+                console.log("sound 4 is done!");
+                res();
+            });
+            sound4.play();
+        });
+    }
+
+
+
+    let sound5 = new Howl({
+        src: ["IntroSounds/guidedMeditation5.wav"],
+        volume: 1.0,
+        onend: function () {
+            console.log('Finished!');
+            return
+        }
+    });
+
+
+    const Promise5 = function () {
+        return new Promise(res => {
+            sound5.on('end', function () {
+                console.log("sound 5 is done!");
+                res();
+            });
+            sound5.play();
+        });
+    }
+
+
+    let sound6 = new Howl({
+        src: ["IntroSounds/guidedMeditation6.wav"],
+        volume: 1.0,
+        onend: function () {
+            console.log('Finished!');
+            return
+        }
+    });
+
+    const Promise6 = function () {
+        return new Promise(res => {
+            sound6.on('end', function () {
+                console.log("sound 6 is done!");
+                res();
+            });
+            sound6.play();
+        });
+    }
+
+
+    let sound7 = new Howl({
+        src: ["IntroSounds/guidedMeditation7.wav"],
+        volume: 1.0,
+        onend: function () {
+            console.log('Finished!');
+            return
+        }
+    });
+
+
+    const Promise7 = function () {
+        return new Promise(res => {
+            sound7.on('end', function () {
+                console.log("sound 7 is done!");
+                res();
+            });
+            sound7.play();
+        });
+    }
+
+
+    let sound8 = new Howl({
+        src: ["IntroSounds/guidedMeditation8.wav"],
+        volume: 1.0,
+        onend: function () {
+            console.log('Finished!');
+            return
+        }
+    });
+
+
+    const Promise8 = function () {
+        return new Promise(res => {
+            sound8.on('end', function () {
+                console.log("sound 8 is done!");
+                res();
+            });
+            sound8.play();
+        });
+    }
+
+
+    let sound9 = new Howl({
+        src: ["IntroSounds/guidedMeditation9.wav"],
+        volume: 1.0,
+        onend: function () {
+            console.log('Finished!');
+            return
+        }
+    });
+
+    const Promise9 = function () {
+        return new Promise(res => {
+            sound9.on('end', function () {
+                console.log("sound 9 is done!");
+                res();
+            });
+            sound9.play();
+        });
+    }
+
+    let sound10 = new Howl({
+        src: ["IntroSounds/guidedMeditation10.wav"],
+        volume: 1.0,
+        onend: function () {
+            console.log('Finished!');
+            return
+        }
+    });
+
+
+    const Promise10 = function () {
+        return new Promise(res => {
+            sound10.on('end', function () {
+                console.log("sound 10 is done!");
+                res();
+            });
+            sound10.play();
+        });
+    }
+
+    const soundThePast = new Howl({
+        src: ["MoreMeditations/GuidedMeditationthepast.wav"],
+        volume: 1.0,
+        onend: function () {
+            console.log('Finished!');
+            return
+        }
+    })
+
+    const ThePastPromise = function () {
+          return new Promise(res => {
+            soundThePast.on('end', function () {
+                console.log("sound soundThePast is done!");
+                res();
+            });
+            soundThePast.play();
+        });
+    }
+
+     const soundFutureAndNow = new Howl({
+        src: ["MoreMeditations/GuidedMeditationfutureAndNow.wav"],
+        volume: 1.0,
+        onend: function () {
+            console.log('Finished!');
+            return
+        }
+    })
+
+    const soundFutureAndNowPromise = function () {
+          return new Promise(res => {
+            soundFutureAndNow.on('end', function () {
+                console.log("sound soundFutureAndNow is done!");
+                res();
+            });
+            soundFutureAndNow.play();
+        });
+    }
+
+    
+     const soundConfirm = new Howl({
+        src: ["MoreMeditations/GuidedMeditationconfirmNow.wav"],
+        volume: 1.0,
+        onend: function () {
+            console.log('Finished!');
+            return
+        }
+    })
+
+    const soundConfirmPromise = function () {
+          return new Promise(res => {
+            soundConfirm.on('end', function () {
+                console.log("sound soundConfirm is done!");
+                res();
+            });
+            soundConfirm.play();
+        });
+    }
+
+      
+     const Distracted = new Howl({
+        src: ["MoreMeditations/GuidedMeditationDistracted.wav"],
+        volume: 1.0,
+        onend: function () {
+            console.log('Finished!');
+            return
+        }
+    })
+
+    const DistractedPromise = function () {
+          return new Promise(res => {
+            Distracted.on('end', function () {
+                console.log("sound Distracted is done!");
+                res();
+            });
+            Distracted.play();
+        });
+    }
+    const RiverAndClouds = new Howl({
+         src: ["MoreMeditations/GuidedMeditationRiverAndClouds.wav"],
+        volume: 1.0,
+        onend: function () {
+            console.log('Finished!');
+            return
+        }
+    })
+        const RiverAndCloudsPromise = function () {
+          return new Promise(res => {
+            RiverAndClouds.on('end', function () {
+                console.log("sound RiverAndClouds is done!");
+                res();
+            });
+            RiverAndClouds.play();
+        });
+    }
+
+        const BeKind = new Howl({
+         src: ["MoreMeditations/GuidedMeditationbekind.wav"],
+        volume: 1.0,
+        onend: function () {
+            console.log('Finished!');
+            return
+        }
+    })
+        const BeKindPromise = function () {
+          return new Promise(res => {
+            BeKind.on('end', function () {
+                console.log("sound BeKind is done!");
+                res();
+            });
+            BeKind.play();
+        });
+    }
+
+    //--------------------------------------------------------------------------------------------------------------------------
+    //--------------------------------------------------------------------------------------------------------------------------
+    //--------------------------------------------------------------------------------------------------------------------------
+
+
+    //our delay function
+    function timeout(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    //our main async function
     async function SoundsAndDelays() {
 
-        sound.play();
+
+        //background water running sound with volume reduced
+        let backgroundWaterFlowingID = backgroundWaterFlowing.play();
+        backgroundWaterFlowing.volume(.1, backgroundWaterFlowingID);
+
+        //give some time before the voice begins
+        await timeout(4000);
+
+        await Promise1();
+        await PromiseGuidedMeditationeyesopenoption();
+        //delay
+        await timeout(3000);
+
+        await Promise2();
+
+        await timeout(5000);
+
+        await Promise3();
+
+        await timeout(4500);
+
+        await Promise4();
+
+        await timeout(5500);
+
+        await Promise5();
+
+        await timeout(4900);
+
+        await Promise6();
+
+        await timeout(5200);
+
+        await Promise7();
+
+        await timeout(5200);
+
+
+        await Promise8();
+
+        await timeout(5200);
+
+
+        await Promise9();
+
+        await timeout(5200);
+
+
+        await Promise10();
+
+        await timeout(5200);
+
+        await ThePastPromise();
+
+        await timeout(5600);
+
+        await soundFutureAndNowPromise();
+
+        await timeout(5050);
+
+        await soundConfirmPromise();
+
+        await timeout(5050);
+
+        await DistractedPromise();
+
+        await timeout(5050);
+
+        await RiverAndCloudsPromise();
 
         await timeout(3000);
 
-        console.log("is delay working?");
-
-        sound.pause();
-
-        await timeout(3000);
-        console.log("is delay working?");
-
-
-        sound.play();
-
-        await timeout(3000);
-        console.log("is delay working?");
-
-        sound.pause();
-
-
-          await timeout(3000);
-        console.log("is delay working?");
-
-                sound.play();
-
-
-          await timeout(3000);
-        console.log("is delay working?");
-
-                sound.pause();
-
-
-          await timeout(3000);
-        console.log("is delay working?");
-
-                 sound.play();
-
-
-          await timeout(3000);
-        console.log("is delay working?");
-
-                sound.pause();
-               
-
-          await timeout(3000);
-        console.log("is delay working?");
-
-                sound.play();
-
-
-          await timeout(3000);
-        console.log("is delay working?");
-
-
-          await timeout(3000);
-        console.log("is delay working?");
-
-
-          await timeout(3000);
-        console.log("is delay working?");
-
-
-          await timeout(3000);
-        console.log("is delay working?");
-
-
-          await timeout(3000);
-        console.log("is delay working?");
-
-
-          await timeout(3000);
-        console.log("is delay working?");
-
-
+        await BeKindPromise();
     }
-    
+
+    //call the async function
     SoundsAndDelays();
-    
+
 
 </script>
 
